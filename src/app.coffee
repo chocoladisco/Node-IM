@@ -33,8 +33,6 @@ io.on 'connection', (socket) ->
 							socket.emit 'request', user.requests[i]
 				
 						socket.on 'addfriend', (data) ->
-							console.log user.username
-							console.log data
 							addFriend user.username, data
 
 		socket.on 'reqregister', ->
@@ -92,14 +90,13 @@ deleteUser = (username) ->
 addFriend = (username, friendname) ->
 	User.findOne 'username': friendname, 'requests', (err, friend) ->
 		User.findOne 'username': username, 'friends', (err, user) ->
-			console.log friend
+			user.friends.concat [friendname]
+			friend.requests.concat [username]
 			console.log user
-			user.friends.push friendname
-			friend.requests.push username
+			console.log friend
 			user.save()
 			friend.save()
-
-
+			
 
 addRequest = (user, friend) ->
 	User.findOne 'username': user , 'friends requests', (err,user) ->
