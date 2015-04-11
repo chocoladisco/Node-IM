@@ -1,0 +1,21 @@
+{
+  "name": "Modern IM",
+  "version": "0.0.0",
+  "authors": [
+    "chocoladisco <chocoladisco@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "peerjs": "~0.3.14",
+    "toastr": "~2.1.1",
+    "bootstrap": "~3.3.4"
+  }
+}

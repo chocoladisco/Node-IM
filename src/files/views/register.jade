@@ -1,0 +1,18 @@
+form.form-signin
+	h2.form-signin-heading Register here
+	label.sr-only(for='inputEmail') Username
+	input#inputuser.form-control(type='text', placeholder='Username', required='', autofocus='')
+
+	label.sr-only(for='inputEmail') Email address
+	input#inputEmail.form-control(type='email', placeholder='Email address', required='')
+
+	label.sr-only(for='inputEmail') Confirm mail
+	input#inputConfirmEmail.form-control(type='email', placeholder='Confirm email', required='')
+
+	label.sr-only(for='inputPassword') Password
+	input#inputPassword.form-control(type='password', placeholder='Password', required='')
+
+	label.sr-only(for='inputPassword') Confirm Password
+	input#inputConfirmPassword.form-control(type='password', placeholder='Confirm Password', required='')
+
+	#register(onclick='register()').btn.btn-lg.btn-primary.btn-block Register

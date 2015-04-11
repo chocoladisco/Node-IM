@@ -1,0 +1,11 @@
+.container-fluid
+  .row-fluid
+    .col-md-3#friendscontainer
+      form.form-signin
+        label.sr-only(for='addfriend') Add friend
+        input#addfriend.form-control(type='email', placeholder='Add friend', required='')
+        #addfriend(onclick='addfriend()').btn.btn-lg.btn-primary.btn-block Add
+
+      ul#friends
+    .col-md-9
+      h1 Username
